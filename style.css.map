@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": ";;;;;;;;;;;;AAGG,qBAAI;EACH,KAAK,EAAE,IAAI;EACX,SAAS,EAAE,KAAK",
+"sources": ["sass/components/_header.scss"],
 "names": [],
 "file": "style.css"
 }
