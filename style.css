@@ -10,9 +10,38 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  storefront-child
 */
+header {
+  height: 96px;
+}
 header nav a.logo img {
   width: 100%;
   max-width: 195px;
+  float: left;
+  vertical-align: middle;
+  margin-top: 15px;
+}
+header nav .menu-main-navigation-container li {
+  list-style: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-right: 70px;
+  height: 96px;
+  line-height: 96px;
+}
+header nav .menu-main-navigation-container li:first-of-type {
+  margin-left: 74px;
+}
+header nav .menu-main-navigation-container li:last-of-type {
+  margin-right: 0;
+}
+header nav .menu-main-navigation-container li.current-menu-item a {
+  color: #333;
+  padding-bottom: 8px;
+  border-bottom: 2px solid #3a6f8f;
+}
+header nav .menu-main-navigation-container li a {
+  color: #333;
+  padding: 0 8px;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,9 +1,42 @@
+@import 'helpers/variables';
+
 header {
+	height: 96px;
 	nav {
 		a.logo {
 			img {
 				width: 100%;
 				max-width: 195px;
+				float: left;
+				vertical-align: middle;
+				margin-top: 15px;
+			}
+		}
+		.menu-main-navigation-container {
+			li {
+				list-style: none;
+				display: inline-block;
+				font-size: 16px;
+				margin-right: 70px;
+				height: 96px;
+				line-height: 96px;
+				&:first-of-type {
+					margin-left: 74px;
+				}
+				&:last-of-type {
+					margin-right: 0;
+				}
+				&.current-menu-item {
+					a {
+						color: $grey;
+						padding-bottom: 8px;
+						border-bottom: 2px solid $primary;
+					}
+				}
+				a {
+					color: $grey;
+					padding: 0 8px;
+				}
 			}
 		}
 	}
