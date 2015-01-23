@@ -19,3 +19,11 @@ function universole_theme_customizer( $wp_customize ) {
 	)));
 }
 add_action('customize_register', 'universole_theme_customizer');
+
+// Strip shortcode
+function strip_code( $atts, $content ) {
+	$content = preg_replace( "/\[\/strip\](\<br \/\>|\<\/p\>.?\<p\>).?\[strip/s", '[/strip][strip', $content );
+   	return '<div class="strip">' . do_shortcode( $content ) . '</div>';
+}
+
+add_shortcode( 'strip', 'strip_code' );
