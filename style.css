@@ -10,6 +10,12 @@
  License URI:  http://www.gnu.org/licenses/gpl-2.0.html
  Text Domain:  storefront-child
 */
+.column-group {
+  width: 90%;
+  max-width: 1168px;
+  margin: 0 auto;
+}
+
 header {
   height: 96px;
 }
@@ -42,6 +48,10 @@ header nav .menu-main-navigation-container li.current-menu-item a {
 header nav .menu-main-navigation-container li a {
   color: #333;
   padding: 0 8px;
+}
+
+.hentry {
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */
