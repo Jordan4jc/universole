@@ -62,6 +62,17 @@ header nav .menu-main-navigation-container li a {
   margin-bottom: 0;
 }
 
+.strip {
+  font-weight: 800;
+  color: white;
+  background-color: #3a6f8f;
+  font-size: 24px;
+  padding: 48px;
+  box-sizing: border-box;
+  line-height: 24px;
+  text-align: center;
+}
+
 footer .footer-wrap {
   max-width: 1168px;
   width: 90%;
