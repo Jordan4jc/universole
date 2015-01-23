@@ -19,6 +19,11 @@
 header {
   height: 96px;
 }
+header nav {
+  max-width: 1168px;
+  width: 90%;
+  margin: 0 auto;
+}
 header nav a.logo img {
   width: 100%;
   max-width: 195px;
@@ -52,6 +57,12 @@ header nav .menu-main-navigation-container li a {
 
 .hentry {
   border: none;
+}
+
+footer .footer-wrap {
+  max-width: 1168px;
+  width: 90%;
+  margin: 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */
