@@ -58,6 +58,9 @@ header nav .menu-main-navigation-container li a {
 .hentry {
   border: none;
 }
+.hentry .wp-post-image {
+  margin-bottom: 0;
+}
 
 footer .footer-wrap {
   max-width: 1168px;
