@@ -68,4 +68,10 @@ footer .footer-wrap {
   margin: 0 auto;
 }
 
+body {
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 300;
+}
+
 /*# sourceMappingURL=style.css.map */
