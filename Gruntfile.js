@@ -18,9 +18,12 @@ module.exports = function(grunt) {
           loadPath: 'sass',
           compass: true
         },
-        files: {
-          'style.css': 'style.scss'
-        }
+        files: [{
+          expand: true,
+          src: ['*.scss'],
+          dest: './',
+          ext: '.css'
+        }]
       }
     },
     concat: {
