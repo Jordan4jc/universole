@@ -53,6 +53,7 @@ header nav .menu-main-navigation-container li.current-menu-item a {
 header nav .menu-main-navigation-container li a {
   color: #333;
   padding: 0 8px;
+  font-weight: 300;
 }
 
 .hentry {
@@ -63,7 +64,7 @@ header nav .menu-main-navigation-container li a {
 }
 
 .strip {
-  font-weight: 800;
+  font-weight: 700;
   color: white;
   background-color: #3a6f8f;
   font-size: 24px;
@@ -71,6 +72,28 @@ header nav .menu-main-navigation-container li a {
   box-sizing: border-box;
   line-height: 24px;
   text-align: center;
+}
+.strip p {
+  margin-bottom: 0;
+}
+.strip .button {
+  background-color: white;
+  border: none;
+  color: #3a6f8f;
+  font-size: 18px;
+  box-shadow: none;
+  padding: 18px 34px;
+  border-radius: 3px;
+  margin-left: 40px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.strip .button:hover {
+  background-color: #333;
+  color: white;
+  opacity: 1;
 }
 
 footer .footer-wrap {
@@ -83,6 +106,13 @@ body {
   font-family: "proxima-nova",sans-serif;
   font-style: normal;
   font-weight: 300;
+  line-height: 21px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 700;
 }
 
 /*# sourceMappingURL=style.css.map */
