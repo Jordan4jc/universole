@@ -1,0 +1,38 @@
+.button {
+  border: none;
+  font-size: 18px;
+  box-shadow: none;
+  padding: 18px 34px;
+  border-radius: 3px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button.white {
+  background-color: white;
+  color: #3a6f8f;
+}
+.button.white:hover {
+  background-color: #333;
+  color: white;
+  opacity: 1;
+}
+.button.blue {
+  background-color: #3a6f8f;
+  color: white;
+}
+.button.blue:hover {
+  background-color: #333;
+  color: white;
+  opacity: 1;
+}
+
+.button {
+  text-decoration: none;
+}
+.button.white {
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.1);
+}
+
+/*# sourceMappingURL=editor.css.map */

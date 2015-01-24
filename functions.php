@@ -39,6 +39,11 @@ function my_mce_before_init_insert_formats( $init_array ) {
             'title' => 'White Button',  
             'selector' => 'a',  
             'classes' => 'button white'             
+        ),
+        array(  
+            'title' => 'Blue Button',  
+            'selector' => 'a',  
+            'classes' => 'button blue'             
         )
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'
@@ -49,6 +54,12 @@ function my_mce_before_init_insert_formats( $init_array ) {
 } 
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
+
+// Add custom editor styles
+function my_theme_add_editor_styles() {
+    add_editor_style( 'editor.css' );
+}
+add_action( 'admin_init', 'my_theme_add_editor_styles' );
 
 // Custom product shortcode
 // Add Shortcode
