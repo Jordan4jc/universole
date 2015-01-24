@@ -15,7 +15,8 @@ module.exports = function(grunt) {
       dev: {
         options: {
           style: 'expanded',
-          loadPath: 'sass'
+          loadPath: 'sass',
+          compass: true
         },
         files: {
           'style.css': 'style.scss'
