@@ -16,6 +16,10 @@
   margin: 0 auto;
 }
 
+#pg-12-0, #pg-12-1, #pg-12-2 {
+  margin-bottom: 45px !important;
+}
+
 header {
   height: 96px;
 }
@@ -63,6 +67,27 @@ header nav .menu-main-navigation-container li a {
   margin-bottom: 0;
 }
 
+.button {
+  border: none;
+  font-size: 18px;
+  box-shadow: none;
+  padding: 18px 34px;
+  border-radius: 3px;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.button.white {
+  background-color: white;
+  color: #3a6f8f;
+}
+.button.white:hover {
+  background-color: #333;
+  color: white;
+  opacity: 1;
+}
+
 .strip {
   font-weight: 700;
   color: white;
@@ -77,23 +102,7 @@ header nav .menu-main-navigation-container li a {
   margin-bottom: 0;
 }
 .strip .button {
-  background-color: white;
-  border: none;
-  color: #3a6f8f;
-  font-size: 18px;
-  box-shadow: none;
-  padding: 18px 34px;
-  border-radius: 3px;
   margin-left: 40px;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-.strip .button:hover {
-  background-color: #333;
-  color: white;
-  opacity: 1;
 }
 
 footer .footer-wrap {
@@ -113,6 +122,32 @@ h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova",sans-serif;
   font-style: normal;
   font-weight: 700;
+}
+
+.shop-item {
+  width: 90%;
+  max-width: 769px;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+  *zoom: 1;
+}
+.shop-item .info {
+  width: 50%;
+  float: left;
+  box-sizing: border-box;
+  padding-right: 30px;
+  position: absolute;
+  top: 50%;
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.shop-item .attachment-post-thumbnail {
+  width: 50%;
+  float: right;
+  max-width: 370px;
 }
 
 /*# sourceMappingURL=style.css.map */

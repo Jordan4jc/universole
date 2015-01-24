@@ -1,0 +1,17 @@
+.button {
+	border: none;
+	font-size: 18px;
+	box-shadow: none;
+	padding: 18px 34px;
+	border-radius: 3px;
+	@include transition(all .3s ease);
+	&.white {
+		background-color: white;
+		color: $primary;
+		&:hover {
+			background-color: $grey;
+			color: white;
+			opacity: 1;
+		}
+	}
+}

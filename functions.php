@@ -38,7 +38,7 @@ function my_mce_before_init_insert_formats( $init_array ) {
         array(  
             'title' => 'White Button',  
             'selector' => 'a',  
-            'classes' => 'button'             
+            'classes' => 'button white'             
         )
     );  
     // Insert the array, JSON ENCODED, into 'style_formats'
@@ -49,3 +49,43 @@ function my_mce_before_init_insert_formats( $init_array ) {
 } 
 // Attach callback to 'tiny_mce_before_init' 
 add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
+
+// Custom product shortcode
+// Add Shortcode
+function shop_item_shortcode( $atts ) {
+    ob_start();
+
+    // Attributes
+    extract( shortcode_atts(
+        array(
+        'sku' => 'none'
+        ), $atts )
+    );
+
+    $args = array(
+        'post_type' => 'product',
+        'posts_per_page' => 1,
+        'meta_key' => '_sku', 
+        'meta_value' => $sku
+        );
+    $query = new WP_Query( $args );
+
+    if ( $query->have_posts() ) { ?>
+        <ul class="clothes-listing">
+            <?php while ( $query->have_posts() ) : $query->the_post(); ?>
+            <aside class="shop-item">
+                <div class="info">
+                    <h2><?php the_title(); ?></h2>
+                    <?php the_excerpt(); ?>
+                    <a href="<php echo get_permalink(); ?>" class="button blue">Shop Now</a>
+                </div>
+                <?php the_post_thumbnail(); ?>
+            </aside>
+            <?php endwhile;
+            wp_reset_postdata(); ?>
+        </ul>
+    <?php $myvariable = ob_get_clean();
+    return $myvariable;
+    }
+}
+add_shortcode( 'shop-item', 'shop_item_shortcode' );

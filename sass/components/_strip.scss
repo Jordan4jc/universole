@@ -11,19 +11,6 @@
 		margin-bottom: 0;
 	}
 	.button {
-		background-color: white;
-		border: none;
-		color: $primary;
-		font-size: 18px;
-		box-shadow: none;
-		padding: 18px 34px;
-		border-radius: 3px;
 		margin-left: 40px;
-		@include transition(all .3s ease);
-		&:hover {
-			background-color: $grey;
-			color: white;
-			opacity: 1;
-		}
 	}
 }

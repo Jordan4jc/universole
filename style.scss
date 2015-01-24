@@ -4,6 +4,7 @@
 @import 'helpers/grid';
 @import 'components/header';
 @import 'components/entry';
+@import 'components/buttons';
 @import 'components/strip';
 @import 'components/footer';
 
@@ -17,4 +18,25 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "proxima-nova",sans-serif;
 	font-style: normal;
 	font-weight: 700;
+}
+.shop-item {
+	width: 90%;
+	max-width: 769px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix();
+	.info {
+		width: 50%;
+		float: left;
+		box-sizing: border-box;
+		padding-right: 30px;
+		position: absolute;
+		top: 50%;
+		@include translateY(-50%);
+	}
+	.attachment-post-thumbnail {
+		width: 50%;
+		float: right;
+		max-width: 370px;
+	}
 }
