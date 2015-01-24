@@ -91,6 +91,15 @@ header nav .menu-main-navigation-container li a {
   color: white;
   opacity: 1;
 }
+.button.blue {
+  background-color: #3a6f8f;
+  color: white;
+}
+.button.blue:hover {
+  background-color: #333;
+  color: white;
+  opacity: 1;
+}
 
 .strip {
   font-weight: 700;

@@ -14,4 +14,13 @@
 			opacity: 1;
 		}
 	}
+	&.blue {
+		background-color: $primary;
+		color: white;
+		&:hover {
+			background-color: $grey;
+			color: white;
+			opacity: 1;
+		}
+	}
 }
