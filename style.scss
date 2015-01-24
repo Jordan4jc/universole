@@ -18,6 +18,13 @@ h1, h2, h3, h4, h5, h6 {
 	font-family: "proxima-nova",sans-serif;
 	font-style: normal;
 	font-weight: 700;
+	margin-bottom: 30px;
+}
+p {
+	margin-bottom: 15px;
+	&:last-child {
+		margin-bottom: 0;
+	}
 }
 .shop-item {
 	width: 90%;
@@ -33,6 +40,11 @@ h1, h2, h3, h4, h5, h6 {
 		position: absolute;
 		top: 50%;
 		@include translateY(-50%);
+		p {
+			&:last-of-type {
+				margin-bottom: 35px;
+			}
+		}
 	}
 	.attachment-post-thumbnail {
 		width: 50%;
