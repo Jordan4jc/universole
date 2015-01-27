@@ -119,6 +119,7 @@ header nav .menu-main-navigation-container li a {
 }
 .strip .button {
   margin-left: 40px;
+  margin-top: 0;
 }
 
 footer .footer-wrap {
