@@ -2,7 +2,7 @@
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
-
+    wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 }
 // Add logo field to customize section
 function universole_theme_customizer( $wp_customize ) {
@@ -100,3 +100,12 @@ function shop_item_shortcode( $atts ) {
     }
 }
 add_shortcode( 'shop-item', 'shop_item_shortcode' );
+
+// remove parent theme widget areas
+function remove_some_widgets(){
+    unregister_sidebar( 'header-1' );
+    unregister_sidebar( 'footer-2' );
+    unregister_sidebar( 'footer-3' );
+    unregister_sidebar( 'footer-4' );
+}
+add_action( 'widgets_init', 'remove_some_widgets', 11 );
