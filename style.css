@@ -149,7 +149,11 @@ header nav .menu-main-navigation-container li a {
   margin-top: 0;
 }
 
-footer .footer-wrap {
+.site-footer {
+  background-color: #333 !important;
+  color: white !important;
+}
+.site-footer .footer-wrap {
   max-width: 1168px;
   width: 90%;
   margin: 0 auto;

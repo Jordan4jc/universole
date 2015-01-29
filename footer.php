@@ -8,20 +8,20 @@
  */
 ?>
 
-		</div><!-- .col-full -->
-	</div><!-- #content -->
-
 	<?php do_action( 'storefront_before_footer' ); ?>
 
 	<footer id="colophon" class="site-footer" role="contentinfo">
 		<div class="footer-wrap">
-
-			<?php
-			/**
-			 * @hooked storefront_footer_widgets - 10
-			 * @hooked storefront_credit - 20
-			 */
-			do_action( 'storefront_footer' ); ?>
+			<?php if ( is_active_sidebar( 'footer-1' ) ) : ?>
+				<div id="footer-sidebar" class="footer-sidebar" role="complementary">
+					<?php dynamic_sidebar( 'footer-1' ); ?>
+				</div><!-- #footer-sidebar -->
+			<?php endif; ?>
+			<div class="copy">
+				<div>&copy; <?php echo date('Y'); ?> Universole</div>
+				<div><a href="http://www.twitter.com/universolehope" target="new" class="fa fa-twitter"></a></div>
+				<div><a href="https://www.facebook.com/Universolehope" target="new" class="fa fa-facebook"></a></div>
+			</div>
 
 		</div><!-- .footer-wrap -->
 	</footer><!-- #colophon -->
