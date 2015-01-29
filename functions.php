@@ -1,9 +1,15 @@
 <?php
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 }
+add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
+function blue_ridge_scripts() {
+    wp_register_script('main', get_stylesheet_directory_uri().'/js/main.js', array('jquery'),null, true);
+    
+    wp_enqueue_script('main');
+}
+add_action( 'wp_enqueue_scripts', 'blue_ridge_scripts' );
 // Add logo field to customize section
 function universole_theme_customizer( $wp_customize ) {
   $wp_customize->add_section('universole_logo_section' , array(
@@ -88,7 +94,7 @@ function shop_item_shortcode( $atts ) {
                 <div class="info">
                     <h2><?php the_title(); ?></h2>
                     <?php the_excerpt(); ?>
-                    <a href="<php echo get_permalink(); ?>" class="button blue">Shop Now</a>
+                    <a href="<?php echo get_permalink(); ?>" class="button blue">Shop Now</a>
                 </div>
                 <?php the_post_thumbnail(); ?>
             </aside>
@@ -109,3 +115,16 @@ function remove_some_widgets(){
     unregister_sidebar( 'footer-4' );
 }
 add_action( 'widgets_init', 'remove_some_widgets', 11 );
+
+// register custom widget areas
+function register_widgets(){
+    register_sidebar( array(
+        'name'          => 'Cart Widget Area',
+        'id'            => 'cart_widget_area',
+        'before_widget' => '<div>',
+        'after_widget'  => '</div>',
+        'before_title'  => '<h2>',
+        'after_title'   => '</h2>',
+    ) );
+}
+add_action( 'widgets_init', 'register_widgets', 11 );

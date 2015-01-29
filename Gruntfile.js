@@ -26,6 +26,20 @@ module.exports = function(grunt) {
         }]
       }
     },
+    coffee: {
+      dev: {
+        options: {
+          sourceMap: true
+        },
+        files: [{
+          expand: true,
+          cwd: 'scripts',
+          src: ['*.coffee'],
+          dest: 'js',
+          ext: '.js'
+        }]
+      }
+    },
     concat: {
       options: {
         banner: '<%= banner %>',
@@ -53,11 +67,16 @@ module.exports = function(grunt) {
         files: '**/*.scss',
         tasks: ['sass:dev']
       },
+      coffee: {
+        files: 'scripts/*.coffee',
+        tasks: ['coffee:dev']
+      }
     }
   });
 
   // These plugins provide necessary tasks.
   grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-coffee');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');

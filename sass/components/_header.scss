@@ -17,6 +17,8 @@ header {
 			}
 		}
 		.menu-main-navigation-container {
+			float: left;
+			display: inline-block;
 			li {
 				list-style: none;
 				display: inline-block;
@@ -81,6 +83,28 @@ header {
 						}
 					}
 				}
+			}
+		}
+		.cart {
+			float: right;
+			line-height: 96px;
+			a {
+				font-size: 28px;
+				color: $grey;
+			}
+			.number {
+				background-color: $primary;
+				color: white;
+				font-size: 12px;
+				height: 16px;
+				width: 16px;
+				line-height: 18px;
+				text-align: center;
+				display: inline-block;
+				border-radius: 50%;
+				position: relative;
+				top: -15px;
+				left: -10px;
 			}
 		}
 	}

@@ -70,6 +70,10 @@ header nav a.logo img {
   vertical-align: middle;
   margin-top: 15px;
 }
+header nav .menu-main-navigation-container {
+  float: left;
+  display: inline-block;
+}
 header nav .menu-main-navigation-container li {
   list-style: none;
   display: inline-block;
@@ -130,6 +134,73 @@ header nav .menu-main-navigation-container li .sub-menu li a {
 header nav .menu-main-navigation-container li .sub-menu li a:hover {
   color: #333;
   background-color: white;
+}
+header nav .cart {
+  float: right;
+  line-height: 96px;
+}
+header nav .cart a {
+  font-size: 28px;
+  color: #333;
+}
+header nav .cart .number {
+  background-color: #3a6f8f;
+  color: white;
+  font-size: 12px;
+  height: 16px;
+  width: 16px;
+  line-height: 18px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+  top: -15px;
+  left: -10px;
+}
+
+#page-cart {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 320px;
+  height: 100%;
+  background-color: #3a6f8f;
+  box-sizing: border-box;
+  padding: 32px 24px 0;
+  color: white;
+}
+#page-cart h2 {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  color: white;
+}
+#page-cart a {
+  color: white;
+}
+#page-cart .product_list_widget li {
+  border-bottom: 1px solid white;
+}
+#page-cart .product_list_widget li:first-of-type {
+  padding-top: 0;
+}
+#page-cart .product_list_widget li .quantity {
+  color: white;
+}
+#page-cart .total {
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+#page-cart .buttons .button {
+  width: 100%;
+  margin-bottom: 24px;
+  text-align: center;
+  background-color: white;
+  color: #333;
+}
+#page-cart .buttons .button:hover {
+  background-color: #333;
+  color: white;
+  opacity: 1;
 }
 
 .hentry {
@@ -287,6 +358,39 @@ p:last-child {
 
 ul {
   margin-bottom: 0;
+}
+
+#overlay {
+  content: '';
+  visibility: hidden;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: opacity .6s ease, visibility 0 linear .6s;
+  -webkit-transition: opacity .6s ease, visibility 0 linear .6s;
+}
+
+#page {
+  box-shadow: 0 0 12px 6px rgba(0, 0, 0, 0.25);
+  position: relative;
+  transition: right .6s ease;
+  -webkit-transition: right .6s ease;
+  right: 0;
+  background-color: white;
+}
+#page.open {
+  right: 320px;
+}
+#page.open #overlay {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: .1s, 0;
+  -webkit-transition-delay: .1s, 0;
 }
 
 .shop-item {

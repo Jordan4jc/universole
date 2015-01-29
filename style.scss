@@ -3,6 +3,7 @@
 @import 'helpers/wordpress';
 @import 'helpers/grid';
 @import 'components/header';
+@import 'components/cart';
 @import 'components/entry';
 @import 'components/buttons';
 @import 'components/strip';
@@ -28,6 +29,37 @@ p {
 }
 ul {
 	margin-bottom: 0;
+}
+#overlay {
+	content: '';
+	visibility: hidden;
+	opacity: 0;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	transition: opacity .6s ease, visibility 0 linear .6s;
+	-webkit-transition: opacity .6s ease, visibility 0 linear .6s;
+}
+#page {
+	box-shadow: 0 0 12px 6px rgba(0,0,0,0.25);
+	position: relative;
+	transition: right .6s ease;
+	-webkit-transition: right .6s ease;
+	right: 0;
+	background-color: white;
+	&.open {
+		right: 320px;
+		#overlay {
+			opacity: 1;
+			visibility: visible;
+			transition-delay: .1s, 0;
+			-webkit-transition-delay: .1s, 0;
+		}
+	}
 }
 .shop-item {
 	width: 90%;

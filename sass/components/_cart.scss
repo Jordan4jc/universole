@@ -1,0 +1,48 @@
+#page-cart {
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 320px;
+	height: 100%;
+	background-color: $primary;
+	box-sizing: border-box;
+	padding: 32px 24px 0;
+	color: white;
+	h2 {
+		margin-top: 24px;
+		margin-bottom: 24px;
+		color: white;
+	}
+	a {
+		color: white;
+	}
+	.product_list_widget {
+		li {
+			border-bottom: 1px solid white;
+			&:first-of-type {
+				padding-top: 0;
+			}
+			.quantity {
+				color: white;
+			}
+		}
+	}
+	.total {
+		margin-top: 24px;
+		margin-bottom: 24px;
+	}
+	.buttons {
+		.button {
+			width: 100%;
+			margin-bottom: 24px;
+			text-align: center;
+			background-color: white;
+			color: $grey;
+			&:hover {
+				background-color: $grey;
+				color: white;
+				opacity: 1
+			}
+		}
+	}
+}
