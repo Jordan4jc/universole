@@ -56,6 +56,7 @@
 
 header {
   height: 96px;
+  background-color: white;
 }
 header nav {
   max-width: 1168px;
@@ -73,14 +74,17 @@ header nav .menu-main-navigation-container li {
   list-style: none;
   display: inline-block;
   font-size: 16px;
-  margin-right: 70px;
+  padding-right: 35px;
+  margin-right: 35px;
   height: 96px;
   line-height: 96px;
 }
 header nav .menu-main-navigation-container li:first-of-type {
-  margin-left: 74px;
+  padding-left: 37px;
+  margin-left: 37px;
 }
 header nav .menu-main-navigation-container li:last-of-type {
+  padding-right: 0;
   margin-right: 0;
 }
 header nav .menu-main-navigation-container li.current-menu-item a {
@@ -88,10 +92,44 @@ header nav .menu-main-navigation-container li.current-menu-item a {
   padding-bottom: 8px;
   border-bottom: 2px solid #3a6f8f;
 }
+header nav .menu-main-navigation-container li:hover .sub-menu {
+  max-height: 1000px;
+}
 header nav .menu-main-navigation-container li a {
   color: #333;
-  padding: 0 8px;
   font-weight: 300;
+}
+header nav .menu-main-navigation-container li .sub-menu {
+  max-height: 0;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  margin: 0;
+  width: 100%;
+  line-height: 20px;
+  background-color: #313131;
+  box-sizing: border-box;
+  text-align: center;
+  transition: max-height .5s ease;
+  -webkit-transition: max-height .5s ease;
+}
+header nav .menu-main-navigation-container li .sub-menu li {
+  margin: 0;
+  display: inline-block;
+  height: auto;
+  line-height: 20px;
+  padding: 0;
+}
+header nav .menu-main-navigation-container li .sub-menu li a {
+  padding: 12px;
+  color: white;
+  display: inline-block;
+  transition: color .3s ease, background-color .3s ease;
+  -webkit-transition: color .3s ease, background-color .3s ease;
+}
+header nav .menu-main-navigation-container li .sub-menu li a:hover {
+  color: #333;
+  background-color: white;
 }
 
 .hentry {
