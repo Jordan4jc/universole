@@ -19,8 +19,11 @@
 			<?php endif; ?>
 			<div class="copy">
 				<div>&copy; <?php echo date('Y'); ?> Universole</div>
-				<div><a href="http://www.twitter.com/universolehope" target="new" class="fa fa-twitter"></a></div>
-				<div><a href="https://www.facebook.com/Universolehope" target="new" class="fa fa-facebook"></a></div>
+				<div class="social">
+					<a href="http://www.twitter.com/universolehope" target="new" class="fa fa-twitter"></a>
+					<a href="https://www.facebook.com/Universolehope" target="new" class="fa fa-facebook"></a>
+				</div>
+				<aside style="clear:both;"></aside>
 			</div>
 
 		</div><!-- .footer-wrap -->

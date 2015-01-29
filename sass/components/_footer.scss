@@ -1,9 +1,80 @@
 .site-footer {
+	padding: 40px 0;
+	font-size: 16px;
+	line-height: 21px;
 	background-color: $grey !important;
 	color: white !important;
 	.footer-wrap {
 		max-width: 1168px;
 		width: 90%;
 		margin: 0 auto;
+	}
+	.widget {
+		margin: 0 0 35px;
+	}
+	.textwidget {
+		font-weight: 700;
+		max-width: 430px;
+		margin: 0 auto;
+		text-align: center;
+	}
+	.widget_nav_menu {
+		ul {
+			text-align: center;
+			li {
+				display: inline-block;
+				width: 106px;
+				text-align: left;
+				vertical-align: top;
+				font-size: 20px;
+				margin-bottom: 0;
+				&:before {
+					content: '';
+					margin-right: 0;
+				}
+				&.current-menu-item {
+					a {
+						color: white;
+					}
+				}
+				&:last-of-type {
+					width: auto;
+				}
+				a {
+					font-weight: 300;
+					color: white;
+				}
+				.sub-menu {
+					margin: 0;
+					margin-top: 12px;
+					li {
+						display: block;
+						margin: 0;
+						font-size: 16px;
+						a {
+							opacity: 0.5;
+						}
+					}
+				}
+			}
+		}
+	}
+	.copy {
+		max-width: 370px;
+		margin: 0 auto;
+		div {
+			width: 50%;
+			float: left;
+			&.social {
+				text-align: right;
+				a {
+					font-size: 24px;
+					color: white;
+					&.fa-twitter {
+						margin-right: 18px;
+					}
+				}
+			}
+		}
 	}
 }
