@@ -6,14 +6,12 @@
  */
 ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 <?php the_post_thumbnail(); ?>
-	<?php
-	/**
-	 * @hooked storefront_page_header - 10
-	 * @hooked storefront_page_content - 20
-	 */
-	// do_action( 'storefront_page' );
-	the_content();
-	?>
-</article><!-- #post-## -->
+<?php
+/**
+ * @hooked storefront_page_header - 10
+ * @hooked storefront_page_content - 20
+ */
+// do_action( 'storefront_page' );
+the_content();
+?>
