@@ -12,12 +12,16 @@
 */
 .inner-grid {
   width: 90%;
-  max-width: 1168px;
+  max-width: 980px;
   margin: 0 auto;
 }
 
-[id*=pg-12] {
+[id*=pg-] {
   margin-bottom: 45px !important;
+}
+
+.widget-title {
+  font-size: 24px;
 }
 
 .textwidget img {
@@ -25,6 +29,14 @@
 }
 .textwidget .button {
   margin-top: 25px;
+}
+.textwidget ul {
+  list-style: initial;
+  box-sizing: border-box;
+  padding-left: 16px;
+}
+.textwidget ul li {
+  margin-bottom: 12px;
 }
 
 .widget_siteorigin-panels-postloop {
@@ -91,7 +103,7 @@ header nav .menu-main-navigation-container li:last-of-type {
   padding-right: 0;
   margin-right: 0;
 }
-header nav .menu-main-navigation-container li.current-menu-item a {
+header nav .menu-main-navigation-container li.current-menu-item > a, header nav .menu-main-navigation-container li.current-page-ancestor > a {
   color: #333;
   padding-bottom: 8px;
   border-bottom: 2px solid #3a6f8f;
@@ -348,6 +360,7 @@ body {
   font-style: normal;
   font-weight: 300;
   line-height: 21px;
+  color: #333 !important;
 }
 
 h1, h2, h3, h4, h5, h6 {

@@ -35,8 +35,8 @@ header {
 					padding-right: 0;
 					margin-right: 0;
 				}
-				&.current-menu-item {
-					a {
+				&.current-menu-item, &.current-page-ancestor {
+					> a {
 						color: $grey;
 						padding-bottom: 8px;
 						border-bottom: 2px solid $primary;

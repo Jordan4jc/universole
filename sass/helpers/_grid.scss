@@ -1,11 +1,14 @@
 @import 'helpers/variables';
 .inner-grid {
 	width: 90%;
-	max-width: 1168px;
+	max-width: 980px;
 	margin: 0 auto;
 }
-[id*=pg-12] {
+[id*=pg-] {
 	margin-bottom: 45px !important;
+}
+.widget-title {
+	font-size: 24px;
 }
 .textwidget {
 	img {
@@ -13,6 +16,14 @@
 	}
 	.button {
 		margin-top: 25px;
+	}
+	ul {
+		list-style: initial;
+		box-sizing: border-box;
+		padding-left: 16px;
+		li {
+			margin-bottom: 12px;
+		}
 	}
 }
 .widget_siteorigin-panels-postloop {
