@@ -67,6 +67,9 @@ ul {
 	margin: 0 auto;
 	position: relative;
 	@include clearfix();
+	.button {
+		margin-top: 0;
+	}
 	.info {
 		width: 50%;
 		float: left;

@@ -77,4 +77,12 @@
 			}
 		}
 	}
+	.watermark {
+		text-align: center;
+		opacity: 0.5;
+		margin-top: 12px;
+		a {
+			color: white !important;
+		}
+	}
 }

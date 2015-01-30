@@ -334,6 +334,14 @@ header nav .cart .number {
 .site-footer .copy div.social a.fa-twitter {
   margin-right: 18px;
 }
+.site-footer .watermark {
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 12px;
+}
+.site-footer .watermark a {
+  color: white !important;
+}
 
 body {
   font-family: "proxima-nova",sans-serif;
@@ -400,6 +408,9 @@ ul {
   position: relative;
   overflow: hidden;
   *zoom: 1;
+}
+.shop-item .button {
+  margin-top: 0;
 }
 .shop-item .info {
   width: 50%;

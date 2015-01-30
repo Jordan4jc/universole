@@ -25,7 +25,9 @@
 				</div>
 				<aside style="clear:both;"></aside>
 			</div>
-
+			<div class="watermark">
+				<p>Designed and Developed by <a href="http://jordanriser.com" target="new">Jordan Riser</a> | Parent theme <a href="http://www.woothemes.com/storefront/" target="new">Storefront</a> by <a hef="http://www.woothemes.com/woocommerce/" target="new">WooCommerce</a></p>
+			</div>
 		</div><!-- .footer-wrap -->
 	</footer><!-- #colophon -->
 
