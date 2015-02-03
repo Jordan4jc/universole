@@ -128,3 +128,8 @@ function register_widgets(){
     ) );
 }
 add_action( 'widgets_init', 'register_widgets', 11 );
+
+function wp176545_add_feature_image() {
+    echo get_the_post_thumbnail( get_option( 'woocommerce_shop_page_id' ) );
+}
+add_action('universole_shop_page_header', 'wp176545_add_feature_image');
