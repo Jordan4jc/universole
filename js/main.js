@@ -1,6 +1,6 @@
 (function() {
   (function($) {
-    $('.fa-shopping-cart').click(function(e) {
+    $('.fa-shopping-cart, .wc-forward:not(.checkout)').click(function(e) {
       e.preventDefault();
       return $('#page').addClass('open');
     });
