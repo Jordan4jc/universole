@@ -35,7 +35,7 @@ header {
 					padding-right: 0;
 					margin-right: 0;
 				}
-				&.current-menu-item, &.current-page-ancestor {
+				&.current-menu-item, &.current-page-ancestor, &.current_page_parent {
 					> a {
 						color: $grey;
 						padding-bottom: 8px;

@@ -31,6 +31,10 @@
   width: 50%;
 }
 
+.col-full {
+  margin-top: 45px;
+}
+
 [id*=pg-] {
   margin-bottom: 45px !important;
 }
@@ -118,7 +122,7 @@ header nav .menu-main-navigation-container li:last-of-type {
   padding-right: 0;
   margin-right: 0;
 }
-header nav .menu-main-navigation-container li.current-menu-item > a, header nav .menu-main-navigation-container li.current-page-ancestor > a {
+header nav .menu-main-navigation-container li.current-menu-item > a, header nav .menu-main-navigation-container li.current-page-ancestor > a, header nav .menu-main-navigation-container li.current_page_parent > a {
   color: #333;
   padding-bottom: 8px;
   border-bottom: 2px solid #3a6f8f;
@@ -186,7 +190,7 @@ header nav .cart .number {
 }
 
 #page-cart {
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   width: 320px;
