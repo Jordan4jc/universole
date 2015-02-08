@@ -21,7 +21,11 @@
 </head>
 
 <body <?php body_class(); ?>>
-<?php global $woocommerce; ?>
+<?php 
+	global $woocommerce; 
+	global $post;
+	$page_slug = get_post( $post )->post_name;
+?>
 <div id="page-cart" role="complementary">
 	<?php dynamic_sidebar( 'cart_widget_area' ); ?>
 </div>
@@ -37,9 +41,14 @@
 				<?php endif; ?>
 			</a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-			<div class="cart">
-				<a href="#" class="fa fa-shopping-cart"></a>
-				<span class="number"><?php echo $woocommerce->cart->cart_contents_count; ?></span>
-			</div>
+			<?php 
+			if($page_slug == 'cart' || $page_slug == 'checkout'){
+			} else {
+				echo '<div class="cart">';
+					echo '<a href="#" class="fa fa-shopping-cart"></a>';
+					echo '<span class="number">'.$woocommerce->cart->cart_contents_count.'</span>';
+				echo '</div>';
+			}
+			?>
 		</nav>
 	</header>
