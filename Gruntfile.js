@@ -11,6 +11,19 @@ module.exports = function(grunt) {
       '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
       ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
+    watch: {
+      options: {
+        livereload: true
+      },
+      sass: {
+        files: '**/*.scss',
+        tasks: ['sass:dev']
+      },
+      coffee: {
+        files: 'scripts/*.coffee',
+        tasks: ['coffee:dev']
+      }
+    },
     sass: {
       dev: {
         options: {
@@ -59,17 +72,15 @@ module.exports = function(grunt) {
         dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
-    watch: {
-      options: {
-        livereload: true
-      },
-      sass: {
-        files: '**/*.scss',
-        tasks: ['sass:dev']
-      },
-      coffee: {
-        files: 'scripts/*.coffee',
-        tasks: ['coffee:dev']
+    browserSync: {
+      dev: {
+        bsFiles: {
+            src : '*.css'
+        },
+        options: {
+            watchTask: true, // < VERY important
+            proxy: "localhost"
+        }
       }
     }
   });
@@ -80,8 +91,9 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browser-sync');
 
   // Default task.
-  grunt.registerTask('default', ['watch']);
+  grunt.registerTask('default', ["browserSync", "watch"]);
 
 };
