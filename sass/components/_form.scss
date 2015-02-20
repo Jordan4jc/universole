@@ -28,5 +28,11 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 	&:focus {
 		background-color: white !important;
 		border-color: rgba(0,0,0,0.07);
+		&.required {
+			border-bottom: 4px solid rgba(0,0,0,0.07) !important;
+		}
+	}
+	&.required {
+		border-bottom: 4px solid rgba(0,0,0,0.03) !important;
 	}
 }

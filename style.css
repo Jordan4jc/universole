@@ -311,6 +311,12 @@ input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, in
   background-color: white !important;
   border-color: rgba(0, 0, 0, 0.07);
 }
+input[type="text"]:focus.required, input[type="email"]:focus.required, input[type="url"]:focus.required, input[type="password"]:focus.required, input[type="search"]:focus.required, textarea:focus.required, .input-text:focus.required {
+  border-bottom: 4px solid rgba(0, 0, 0, 0.07) !important;
+}
+input[type="text"].required, input[type="email"].required, input[type="url"].required, input[type="password"].required, input[type="search"].required, textarea.required, .input-text.required {
+  border-bottom: 4px solid rgba(0, 0, 0, 0.03) !important;
+}
 
 .strip {
   font-weight: 700;
