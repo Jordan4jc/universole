@@ -1,0 +1,32 @@
+form {
+	margin-bottom: 0;
+	p:last-of-type {
+		margin-bottom: 0;
+	}
+}
+div.wpcf7-response-output {
+	clear:both;
+}
+input[type="submit"] {
+	float: left;
+	@extend .button;
+	background-color: $primary !important;
+	&:hover {
+		background-color: $grey !important;
+		opacity: 1;
+	}
+}
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea, .input-text {
+	width: 100%;
+	box-shadow: none;
+	background: none;
+	background-color: white;
+	border-radius: 3px;
+	border: 4px solid rgba(0,0,0,0.03);
+	padding: 0.918em;
+	@include transition(border-color .3s ease);
+	&:focus {
+		background-color: white !important;
+		border-color: rgba(0,0,0,0.07);
+	}
+}
