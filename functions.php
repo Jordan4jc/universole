@@ -4,12 +4,12 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
-function blue_ridge_scripts() {
+function universole_scritps() {
     wp_register_script('main', get_stylesheet_directory_uri().'/js/main.js', array('jquery'),null, true);
     
     wp_enqueue_script('main');
 }
-add_action( 'wp_enqueue_scripts', 'blue_ridge_scripts' );
+add_action( 'wp_enqueue_scripts', 'universole_scritps' );
 // Add logo field to customize section
 function universole_theme_customizer( $wp_customize ) {
   $wp_customize->add_section('universole_logo_section' , array(
