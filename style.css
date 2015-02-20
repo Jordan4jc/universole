@@ -471,4 +471,8 @@ ul {
   max-width: 370px;
 }
 
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea, .input-text {
+  width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
