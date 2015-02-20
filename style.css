@@ -49,7 +49,7 @@
 .textwidget img {
   margin-bottom: 35px;
 }
-.textwidget .button {
+.textwidget .button, .textwidget input[type="submit"] {
   margin-top: 25px;
 }
 .textwidget ul {
@@ -224,14 +224,14 @@ header nav .cart .number {
   margin-top: 24px;
   margin-bottom: 24px;
 }
-#page-cart .buttons .button {
+#page-cart .buttons .button, #page-cart .buttons input[type="submit"] {
   width: 100%;
   margin-bottom: 24px;
   text-align: center;
   background-color: white;
   color: #333;
 }
-#page-cart .buttons .button:hover {
+#page-cart .buttons .button:hover, #page-cart .buttons input[type="submit"]:hover {
   background-color: #333;
   color: white;
   opacity: 1;
@@ -244,7 +244,7 @@ header nav .cart .number {
   margin-bottom: 0;
 }
 
-.button {
+.button, input[type="submit"] {
   border: none;
   font-size: 18px;
   box-shadow: none;
@@ -255,23 +255,61 @@ header nav .cart .number {
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
-.button.white {
+.button.white, input.white[type="submit"] {
   background-color: white;
   color: #3a6f8f;
 }
-.button.white:hover {
+.button.white:hover, input.white[type="submit"]:hover {
   background-color: #333;
   color: white;
   opacity: 1;
 }
-.button.blue {
+.button.blue, input.blue[type="submit"] {
   background-color: #3a6f8f;
   color: white;
 }
-.button.blue:hover {
+.button.blue:hover, input.blue[type="submit"]:hover {
   background-color: #333;
   color: white;
   opacity: 1;
+}
+
+form {
+  margin-bottom: 0;
+}
+form p:last-of-type {
+  margin-bottom: 0;
+}
+
+div.wpcf7-response-output {
+  clear: both;
+}
+
+input[type="submit"] {
+  float: left;
+  background-color: #3a6f8f !important;
+}
+input[type="submit"]:hover {
+  background-color: #333 !important;
+  opacity: 1;
+}
+
+input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea, .input-text {
+  width: 100%;
+  box-shadow: none;
+  background: none;
+  background-color: white;
+  border-radius: 3px;
+  border: 4px solid rgba(0, 0, 0, 0.03);
+  padding: 0.918em;
+  -moz-transition: border-color 0.3s ease;
+  -o-transition: border-color 0.3s ease;
+  -webkit-transition: border-color 0.3s ease;
+  transition: border-color 0.3s ease;
+}
+input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus, .input-text:focus {
+  background-color: white !important;
+  border-color: rgba(0, 0, 0, 0.07);
 }
 
 .strip {
@@ -287,7 +325,7 @@ header nav .cart .number {
 .strip p {
   margin-bottom: 0;
 }
-.strip .button {
+.strip .button, .strip input[type="submit"] {
   margin-left: 40px;
   margin-top: 0;
 }
@@ -447,7 +485,7 @@ ul {
   overflow: hidden;
   *zoom: 1;
 }
-.shop-item .button {
+.shop-item .button, .shop-item input[type="submit"] {
   margin-top: 0;
 }
 .shop-item .info {
@@ -469,10 +507,6 @@ ul {
   width: 50%;
   float: right;
   max-width: 370px;
-}
-
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea, .input-text {
-  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */

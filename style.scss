@@ -6,6 +6,7 @@
 @import 'components/cart';
 @import 'components/entry';
 @import 'components/buttons';
+@import 'components/form';
 @import 'components/strip';
 @import 'components/footer';
 
@@ -95,7 +96,4 @@ ul {
 		float: right;
 		max-width: 370px;
 	}
-}
-input[type="text"], input[type="email"], input[type="url"], input[type="password"], input[type="search"], textarea, .input-text {
-	width: 100%;
 }
