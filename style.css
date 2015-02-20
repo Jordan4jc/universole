@@ -383,6 +383,9 @@ body {
   line-height: 21px;
   color: #333 !important;
 }
+body.home .storefront-pagination {
+  display: none;
+}
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "proxima-nova",sans-serif;
