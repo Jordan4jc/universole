@@ -36,17 +36,27 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 		border-bottom: 4px solid rgba(0,0,0,0.03) !important;
 	}
 }
-.page-template-template-fullwidth-php table.cart thead th, table.cart td, table.cart th {
-	padding: .857em .857em !important;
+table.cart {
+	td {
+		vertical-align: middle;
+		&.actions {
+			padding: .857em .857em;
+			input {
+				float: left;
+				display: block;
+				&[name=apply_coupon] {
+					margin-left: 12px;
+				}
+				&[name=update_cart] {
+					clear: left;
+					margin-top: 12px;
+				}
+			}
+		}
+	}
 }
-table.cart td.actions input {
-	float: left;
-	display: block;
-	&[name=apply_coupon] {
-		margin-left: 12px;
-	}
-	&[name=update_cart] {
-		clear: left;
-		margin-top: 12px;
-	}
+table.cart .quantity .qty {
+	border: none;
+	height: 30px;
+	padding: 0 9px !important;
 }
