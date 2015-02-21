@@ -1,6 +1,6 @@
 (($) ->
 	# cart script
-	$('.fa-shopping-cart, .wc-forward:not(.checkout)').click (e) ->
+	$('.fa-shopping-cart').click (e) ->
 		e.preventDefault()
 		$('#page').addClass 'open'
 
