@@ -4,7 +4,6 @@
 	max-width: 980px;
 	margin: 0 auto;
 	@include clearfix();
-	overflow: initial;
 	.col {
 		float: left;
 		box-sizing: border-box;
