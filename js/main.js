@@ -4,8 +4,12 @@
       e.preventDefault();
       return $('#page').addClass('open');
     });
-    return $('#overlay').click(function() {
+    $('#overlay').click(function() {
       return $('#page').removeClass('open');
+    });
+    return $('.menu-trigger').click(function(e) {
+      e.preventDefault();
+      return $('.menu-main-navigation-container').slideToggle();
     });
   })(jQuery);
 

@@ -40,6 +40,7 @@
 					<img src="<?php echo bloginfo('template_directory'); ?>/images/blue-ridge-arrangement-image-logo.png">
 				<?php endif; ?>
 			</a>
+			<a href="#" class="menu-trigger">Menu<span class="fa fa-caret-down"></span></a>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
 			<?php 
 			if($page_slug == 'cart' || $page_slug == 'checkout'){
@@ -50,5 +51,6 @@
 				echo '</div>';
 			}
 			?>
+			<div class="clear"></div>
 		</nav>
 	</header>

@@ -6,4 +6,8 @@
 
 	$('#overlay').click ->
 		$('#page').removeClass 'open'
+
+	$('.menu-trigger').click (e) ->
+		e.preventDefault()
+		$('.menu-main-navigation-container').slideToggle()
 ) jQuery

@@ -7,6 +7,29 @@ header {
 		max-width: 1168px;
 		width: 90%;
 		margin: 0 auto;
+		position: relative;
+		a.menu-trigger {
+			background-color: $primary;
+			width: 100%;
+			color: white;
+			display: block;
+			font-size: 1.2em;
+			float: left;
+			height: 44px;
+			line-height: 44px;
+			text-align: center;
+			margin-top: 24px;
+			margin-bottom: 24px;
+			@media (min-width: 1140px) {
+				display: none;
+			}
+			span {
+				margin-left: 8px;
+				font-size: 1.3em;
+			  position: relative;
+				top: 3px;
+			}
+		}
 		a.logo {
 			img {
 				width: 100%;
@@ -19,6 +42,19 @@ header {
 		.menu-main-navigation-container {
 			float: left;
 			display: inline-block;
+			padding-bottom: 24px;
+			@media (max-width: 1140px) {
+				width: 100%;
+				display: none;
+				ul {
+					margin: 0;
+					display: block;
+					height: 100%;
+					width: 100%;
+					padding-left: 24px;
+					box-sizing: border-box;
+				}
+			}
 			li {
 				list-style: none;
 				display: inline-block;
@@ -27,9 +63,20 @@ header {
 				margin-right: 35px;
 				height: 96px;
 				line-height: 96px;
+				@media (max-width: 1140px) {
+					display: block;
+					padding: 0;
+					margin: 0;
+					height: auto;
+					line-height: 36px;
+				}
 				&:first-of-type {
 					padding-left: 37px;
 					margin-left: 37px;
+					@media (max-width: 1140px) {
+						padding: 0;
+						margin: 0;
+					}
 				}
 				&:last-of-type {
 					padding-right: 0;
@@ -64,12 +111,25 @@ header {
 					text-align: center;
 					transition: max-height .5s ease;
 					-webkit-transition: max-height .5s ease;
+					@media (max-width: 1140px) {
+						overflow: initial;
+						position: relative;
+						max-height: none;
+						background-color: transparent;
+						padding-left: 24px;
+						box-sizing: border-box;
+					}
 					li {
 						margin: 0;
 						display: inline-block;
 						height: auto;
 						line-height: 20px;
 						padding: 0;
+						@media (max-width: 1140px) {
+							display: block;
+							line-height: 36px;
+							text-align: left;
+						}
 						a {
 							&:hover {
 								color: $grey;
@@ -80,6 +140,10 @@ header {
 							display: inline-block;
 							transition: color .3s ease, background-color .3s ease;
 							-webkit-transition: color .3s ease, background-color .3s ease;
+							@media (max-width: 1140px) {
+								color: $grey;
+								padding: 0;
+							}
 						}
 					}
 				}
@@ -88,6 +152,12 @@ header {
 		.cart {
 			float: right;
 			line-height: 96px;
+			@media (max-width: 1140px) {
+				  position: absolute;
+				  float: none;
+				  top: 0;
+				  right: 0;
+			}
 			a {
 				font-size: 28px;
 				color: $grey;

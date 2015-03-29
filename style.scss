@@ -37,6 +37,9 @@ p {
 ul {
 	margin-bottom: 0;
 }
+.clear {
+	clear:both;
+}
 #overlay {
 	content: '';
 	visibility: hidden;

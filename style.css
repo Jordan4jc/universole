@@ -95,6 +95,31 @@ header nav {
   max-width: 1168px;
   width: 90%;
   margin: 0 auto;
+  position: relative;
+}
+header nav a.menu-trigger {
+  background-color: #3a6f8f;
+  width: 100%;
+  color: white;
+  display: block;
+  font-size: 1.2em;
+  float: left;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+@media (min-width: 1140px) {
+  header nav a.menu-trigger {
+    display: none;
+  }
+}
+header nav a.menu-trigger span {
+  margin-left: 8px;
+  font-size: 1.3em;
+  position: relative;
+  top: 3px;
 }
 header nav a.logo img {
   width: 100%;
@@ -106,6 +131,21 @@ header nav a.logo img {
 header nav .menu-main-navigation-container {
   float: left;
   display: inline-block;
+  padding-bottom: 24px;
+}
+@media (max-width: 1140px) {
+  header nav .menu-main-navigation-container {
+    width: 100%;
+    display: none;
+  }
+  header nav .menu-main-navigation-container ul {
+    margin: 0;
+    display: block;
+    height: 100%;
+    width: 100%;
+    padding-left: 24px;
+    box-sizing: border-box;
+  }
 }
 header nav .menu-main-navigation-container li {
   list-style: none;
@@ -116,9 +156,24 @@ header nav .menu-main-navigation-container li {
   height: 96px;
   line-height: 96px;
 }
+@media (max-width: 1140px) {
+  header nav .menu-main-navigation-container li {
+    display: block;
+    padding: 0;
+    margin: 0;
+    height: auto;
+    line-height: 36px;
+  }
+}
 header nav .menu-main-navigation-container li:first-of-type {
   padding-left: 37px;
   margin-left: 37px;
+}
+@media (max-width: 1140px) {
+  header nav .menu-main-navigation-container li:first-of-type {
+    padding: 0;
+    margin: 0;
+  }
 }
 header nav .menu-main-navigation-container li:last-of-type {
   padding-right: 0;
@@ -150,12 +205,29 @@ header nav .menu-main-navigation-container li .sub-menu {
   transition: max-height .5s ease;
   -webkit-transition: max-height .5s ease;
 }
+@media (max-width: 1140px) {
+  header nav .menu-main-navigation-container li .sub-menu {
+    overflow: initial;
+    position: relative;
+    max-height: none;
+    background-color: transparent;
+    padding-left: 24px;
+    box-sizing: border-box;
+  }
+}
 header nav .menu-main-navigation-container li .sub-menu li {
   margin: 0;
   display: inline-block;
   height: auto;
   line-height: 20px;
   padding: 0;
+}
+@media (max-width: 1140px) {
+  header nav .menu-main-navigation-container li .sub-menu li {
+    display: block;
+    line-height: 36px;
+    text-align: left;
+  }
 }
 header nav .menu-main-navigation-container li .sub-menu li a {
   padding: 12px;
@@ -168,9 +240,23 @@ header nav .menu-main-navigation-container li .sub-menu li a:hover {
   color: #333;
   background-color: white;
 }
+@media (max-width: 1140px) {
+  header nav .menu-main-navigation-container li .sub-menu li a {
+    color: #333;
+    padding: 0;
+  }
+}
 header nav .cart {
   float: right;
   line-height: 96px;
+}
+@media (max-width: 1140px) {
+  header nav .cart {
+    position: absolute;
+    float: none;
+    top: 0;
+    right: 0;
+  }
 }
 header nav .cart a {
   font-size: 28px;
@@ -475,6 +561,10 @@ p:last-child {
 
 ul {
   margin-bottom: 0;
+}
+
+.clear {
+  clear: both;
 }
 
 #overlay {
