@@ -600,6 +600,19 @@ ul {
   -webkit-transition-delay: .1s, 0;
 }
 
+@media (max-width: 568px) {
+  .hero-image {
+    overflow: hidden;
+    width: 100%;
+  }
+  .hero-image img {
+    max-width: 160%;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .shop-item {
   width: 90%;
   max-width: 769px;

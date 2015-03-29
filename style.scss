@@ -71,6 +71,18 @@ ul {
 		}
 	}
 }
+.hero-image {
+	@media (max-width: 568px) {
+		overflow: hidden;
+		width: 100%;
+		img {
+			max-width: 160%;
+			position: relative;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+}
 .shop-item {
 	width: 90%;
 	max-width: 769px;

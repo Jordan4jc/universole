@@ -6,7 +6,9 @@
  */
 ?>
 
-<?php the_post_thumbnail(); ?>
+<div class="hero-image">
+	<?php the_post_thumbnail(); ?>
+</div>
 <?php
 /**
  * @hooked storefront_page_header - 10
