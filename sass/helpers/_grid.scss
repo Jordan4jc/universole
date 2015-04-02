@@ -38,6 +38,9 @@
 		list-style: initial;
 		box-sizing: border-box;
 		padding-left: 16px;
+		&.clothes-listing {
+			padding-left: 0;
+		}
 		li {
 			margin-bottom: 12px;
 		}
@@ -54,6 +57,10 @@
 		box-sizing: border-box;
 		width: 33.3333%;
 		float: left;
+		@media (max-width: 780px) {
+			float: none;
+			width: 100%;
+		}
 		.wp-post-image {
 			margin-bottom: 37px;
 		}
