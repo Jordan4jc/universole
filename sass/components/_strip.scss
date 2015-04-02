@@ -13,5 +13,12 @@
 	.button {
 		margin-left: 40px;
 		margin-top: 0;
+		@media (max-width: 780px) {
+			margin-left: auto;
+		  margin-top: 20px;
+		  display: block;
+		  max-width: 320px;
+		  margin-right: auto;
+		}
 	}
 }

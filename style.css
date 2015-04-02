@@ -448,6 +448,15 @@ table.cart .quantity .qty {
   margin-left: 40px;
   margin-top: 0;
 }
+@media (max-width: 780px) {
+  .strip .button, .strip input[type="submit"] {
+    margin-left: auto;
+    margin-top: 20px;
+    display: block;
+    max-width: 320px;
+    margin-right: auto;
+  }
+}
 
 .site-footer {
   padding: 40px 0;
