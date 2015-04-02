@@ -28,6 +28,12 @@
 				vertical-align: top;
 				font-size: 20px;
 				margin-bottom: 0;
+				@media (max-width: 680px) {
+					display: block;
+				  text-align: center;
+				  width: auto;
+				  margin-bottom: 20px;
+				}
 				&:before {
 					content: '';
 					margin-right: 0;
@@ -51,6 +57,9 @@
 						display: block;
 						margin: 0;
 						font-size: 16px;
+						@media (max-width: 680px) {
+							margin-bottom: 15px;
+						}
 						a {
 							opacity: 0.5;
 						}
@@ -65,8 +74,17 @@
 		div {
 			width: 50%;
 			float: left;
+			@media (max-width: 680px) {
+				width: 100%;
+				float: none;
+				text-align: center;
+			}
 			&.social {
 				text-align: right;
+				@media (max-width: 680px) {
+					text-align: center;
+					margin-top: 15px;
+				}
 				a {
 					font-size: 24px;
 					color: white;

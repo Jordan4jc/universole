@@ -518,6 +518,14 @@ table.cart .quantity .qty {
   font-size: 20px;
   margin-bottom: 0;
 }
+@media (max-width: 680px) {
+  .site-footer .widget_nav_menu ul li {
+    display: block;
+    text-align: center;
+    width: auto;
+    margin-bottom: 20px;
+  }
+}
 .site-footer .widget_nav_menu ul li:before {
   content: '';
   margin-right: 0;
@@ -541,6 +549,11 @@ table.cart .quantity .qty {
   margin: 0;
   font-size: 16px;
 }
+@media (max-width: 680px) {
+  .site-footer .widget_nav_menu ul li .sub-menu li {
+    margin-bottom: 15px;
+  }
+}
 .site-footer .widget_nav_menu ul li .sub-menu li a {
   opacity: 0.5;
 }
@@ -552,8 +565,21 @@ table.cart .quantity .qty {
   width: 50%;
   float: left;
 }
+@media (max-width: 680px) {
+  .site-footer .copy div {
+    width: 100%;
+    float: none;
+    text-align: center;
+  }
+}
 .site-footer .copy div.social {
   text-align: right;
+}
+@media (max-width: 680px) {
+  .site-footer .copy div.social {
+    text-align: center;
+    margin-top: 15px;
+  }
 }
 .site-footer .copy div.social a {
   font-size: 24px;
