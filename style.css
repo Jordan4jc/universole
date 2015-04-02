@@ -89,6 +89,14 @@
   .widget_siteorigin-panels-postloop .home-post {
     float: none;
     width: 100%;
+    padding: 0;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .widget_siteorigin-panels-postloop .home-post img {
+    display: block;
+    max-width: 320px;
+    margin: 0 auto;
   }
 }
 .widget_siteorigin-panels-postloop .home-post .wp-post-image {
