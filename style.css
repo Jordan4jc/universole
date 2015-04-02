@@ -565,6 +565,7 @@ body {
   font-style: normal;
   font-weight: 300;
   line-height: 21px;
+  overflow-x: hidden;
   color: #333 !important;
 }
 body.home .storefront-pagination {
