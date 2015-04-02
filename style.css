@@ -59,6 +59,9 @@
 .textwidget ul.clothes-listing {
   padding-left: 0;
 }
+.textwidget ul.clothes-listing .shop-item {
+  width: 100%;
+}
 .textwidget ul li {
   margin-bottom: 12px;
 }
@@ -69,6 +72,11 @@
   margin: 0 auto;
   overflow: hidden;
   *zoom: 1;
+}
+@media (max-width: 780px) {
+  .widget_siteorigin-panels-postloop {
+    width: 100%;
+  }
 }
 .widget_siteorigin-panels-postloop .home-post {
   padding-left: 15px;

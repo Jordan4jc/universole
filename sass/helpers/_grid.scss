@@ -40,6 +40,9 @@
 		padding-left: 16px;
 		&.clothes-listing {
 			padding-left: 0;
+			.shop-item {
+				width: 100%;
+			}
 		}
 		li {
 			margin-bottom: 12px;
@@ -51,6 +54,9 @@
 	max-width: 1168px;
 	margin: 0 auto;
 	@include clearfix();
+	@media (max-width: 780px) {
+		width: 100%;
+	}
 	.home-post {
 		padding-left: 15px;
 		padding-right: 15px;
