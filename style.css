@@ -33,6 +33,13 @@
   width: 50%;
 }
 
+.reverse .panel-grid-cell:first-of-type {
+  float: right !important;
+}
+.reverse .panel-grid-cell:last-of-type {
+  float: left !important;
+}
+
 .col-full {
   margin-top: 45px;
 }
