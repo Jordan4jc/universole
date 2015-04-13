@@ -70,8 +70,6 @@ add_action( 'admin_init', 'my_theme_add_editor_styles' );
 // Custom product shortcode
 // Add Shortcode
 function shop_item_shortcode( $atts ) {
-    ob_start();
-
     // Attributes
     extract( shortcode_atts(
         array(
@@ -88,7 +86,7 @@ function shop_item_shortcode( $atts ) {
     $query = new WP_Query( $args );
 
     if ( $query->have_posts() ) { ?>
-        <ul class="clothes-listing">
+        <div class="clothes-listing">
             <?php while ( $query->have_posts() ) : $query->the_post(); ?>
             <aside class="shop-item">
                 <div class="info">
@@ -100,9 +98,10 @@ function shop_item_shortcode( $atts ) {
             </aside>
             <?php endwhile;
             wp_reset_postdata(); ?>
-        </ul>
-    <?php $myvariable = ob_get_clean();
-    return $myvariable;
+        </div>
+    <?php
+    } else {
+        return false;
     }
 }
 add_shortcode( 'shop-item', 'shop_item_shortcode' );
