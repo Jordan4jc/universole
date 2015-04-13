@@ -123,7 +123,7 @@ header nav {
   max-width: 1168px;
   width: 90%;
   margin: 0 auto;
-  position: relative;
+  height: 96px;
 }
 header nav a.menu-trigger {
   background-color: #3a6f8f;
@@ -159,10 +159,10 @@ header nav a.logo img {
 header nav .menu-main-navigation-container {
   float: left;
   display: inline-block;
-  padding-bottom: 24px;
 }
 @media (max-width: 1140px) {
   header nav .menu-main-navigation-container {
+    padding-bottom: 24px;
     width: 100%;
     display: none;
   }

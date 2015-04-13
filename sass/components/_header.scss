@@ -7,7 +7,7 @@ header {
 		max-width: 1168px;
 		width: 90%;
 		margin: 0 auto;
-		position: relative;
+		height: 96px;
 		a.menu-trigger {
 			background-color: $primary;
 			width: 100%;
@@ -42,8 +42,8 @@ header {
 		.menu-main-navigation-container {
 			float: left;
 			display: inline-block;
-			padding-bottom: 24px;
 			@media (max-width: 1140px) {
+				padding-bottom: 24px;
 				width: 100%;
 				display: none;
 				ul {

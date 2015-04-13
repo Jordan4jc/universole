@@ -7,9 +7,14 @@
     $('#overlay').click(function() {
       return $('#page').removeClass('open');
     });
-    return $('.menu-trigger').click(function(e) {
+    $('.menu-trigger').click(function(e) {
       e.preventDefault();
       return $('.menu-main-navigation-container').slideToggle();
+    });
+    return $(window).resize(function() {
+      if ($(window).outerWidth() >= 1140) {
+        return $('.menu-main-navigation-container').removeAttr('style');
+      }
     });
   })(jQuery);
 
