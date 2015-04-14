@@ -31,30 +31,21 @@ get_header(); ?>
 			$isEven;
 			$loop = new WP_Query( $args );
 			if ( $loop->have_posts() ) {
+				echo '<div class="sandals">';
 				while ( $loop->have_posts() ) : $loop->the_post();
 					echo '<section class="inner-grid">';
-					if($isEven) {
-						echo '<aside class="col half">';
-						the_title('<h2>','</h2>');
-						the_content();
-						echo '<a class="button blue" href="'.get_permalink().'">View in the Shop</a>';
-						echo '</aside>';
-						echo '<aside class="col half">';
-						the_post_thumbnail();
-						echo '</aside>';
-					} else {
-						echo '<aside class="col half">';
-						the_post_thumbnail();
-						echo '</aside>';
-						echo '<aside class="col half">';
-						the_title('<h2>','</h2>');
-						the_content();
-						echo '<a class="button blue" href="'.get_permalink().'">View in the Shop</a>';
-						echo '</aside>';
-					}
+					echo '<aside class="col half">';
+					the_post_thumbnail();
+					echo '</aside>';
+					echo '<aside class="col half">';
+					the_title('<h2>','</h2>');
+					the_content();
+					echo '<a class="button blue" href="'.get_permalink().'">View in the Shop</a>';
+					echo '</aside>';
 					$isEven = ! $isEven;
 					echo '</section>';
 				endwhile;
+				echo '</div>';
 			} else {
 				echo __( 'No products found' );
 			}
