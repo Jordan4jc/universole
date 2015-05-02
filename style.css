@@ -469,7 +469,6 @@ div.wpcf7-response-output {
 }
 
 input[type="submit"] {
-  float: left;
   background-color: #3a6f8f !important;
 }
 input[type="submit"]:hover {

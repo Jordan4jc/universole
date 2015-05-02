@@ -8,7 +8,6 @@ div.wpcf7-response-output {
 	clear:both;
 }
 input[type="submit"] {
-	float: left;
 	@extend .button;
 	background-color: $primary !important;
 	&:hover {
