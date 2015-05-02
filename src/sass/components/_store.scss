@@ -48,6 +48,11 @@
 	}
 }
 table.cart {
+	.quantity {
+		.qty {
+			max-width: none;
+		}
+	}
 	td.actions {
 		input[name=apply_coupon] {
 			@media screen and (max-width: 65.141em) {
