@@ -1,15 +1,18 @@
 <?php
-function theme_enqueue_styles() {
+
+function universole_scripts() {
+    if (in_array($_SERVER['REMOTE_ADDR'], array('127.0.0.1', '::1'))) {
+      wp_register_script('livereload', 'http://localhost:35729/livereload.js?snipver=1', null, false, true);
+      wp_enqueue_script('livereload');
+    }
+
+    wp_register_script('main', get_stylesheet_directory_uri().'/js/main.js', array('jquery'),null, true);
+    wp_enqueue_script('main');
+
     wp_enqueue_style( 'parent-style', get_template_directory_uri() . '/style.css' );
     wp_enqueue_style( 'font-awesome', '//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css');
 }
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
-function universole_scritps() {
-    wp_register_script('main', get_stylesheet_directory_uri().'/js/main.js', array('jquery'),null, true);
-    
-    wp_enqueue_script('main');
-}
-add_action( 'wp_enqueue_scripts', 'universole_scritps' );
+add_action( 'wp_enqueue_scripts', 'universole_scripts' );
 // Add logo field to customize section
 function universole_theme_customizer( $wp_customize ) {
   $wp_customize->add_section('universole_logo_section' , array(

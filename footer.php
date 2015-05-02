@@ -36,6 +36,5 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script src="//localhost:35729/livereload.js"></script>
 </body>
 </html>
