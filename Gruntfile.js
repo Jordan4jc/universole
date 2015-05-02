@@ -3,97 +3,65 @@ module.exports = function(grunt) {
 
   // Project configuration.
   grunt.initConfig({
-    // Metadata.
-    pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.title || pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
     // Task configuration.
-    watch: {
-      options: {
-        livereload: true
-      },
-      sass: {
-        files: '**/*.scss',
-        tasks: ['sass:dev']
-      },
-      coffee: {
-        files: 'scripts/*.coffee',
-        tasks: ['coffee:dev']
-      }
-    },
     sass: {
       dev: {
         options: {
-          style: 'expanded',
-          loadPath: 'sass',
-          compass: true
+          style: 'expanded'
         },
         files: [{
           expand: true,
-          src: ['*.scss'],
-          dest: './',
+          cwd: 'src/sass',
+          src: ['**/*.scss'],
+          dest: '.',
           ext: '.css'
         }]
       }
     },
     coffee: {
       dev: {
-        options: {
-          sourceMap: true
-        },
         files: [{
           expand: true,
-          cwd: 'scripts',
-          src: ['*.coffee'],
+          cwd: 'src/coffee',
+          src: ['**/*.coffee'],
           dest: 'js',
           ext: '.js'
         }]
       }
     },
-    concat: {
-      options: {
-        banner: '<%= banner %>',
-        stripBanners: true
-      },
-      dist: {
-        src: ['lib/<%= pkg.name %>.js'],
-        dest: 'dist/<%= pkg.name %>.js'
+    autoprefixer: {
+      css: {
+        src: 'style.css',
+        dest: 'style.css'
       }
     },
-    uglify: {
+    watch: {
       options: {
-        banner: '<%= banner %>'
+        livereload: true,
       },
-      dist: {
-        src: '<%= concat.dist.dest %>',
-        dest: 'dist/<%= pkg.name %>.min.js'
-      }
+      sass: {
+        files: ['src/sass/**/*.scss'],
+        tasks: ['sass:dev','autoprefixer']
+      },
+      coffe: {
+        files: ['src/coffee/**/*.coffee'],
+        tasks: ['coffee:dev']
+      },
+      livereload: {
+        // Here we watch the files the sass task will compile to
+        // These files are sent to the live reload server after sass compiles to them
+        files: ['style.css','*.php','js/*.js'],
+      },
     },
-    browserSync: {
-      dev: {
-        bsFiles: {
-            src : '*.css'
-        },
-        options: {
-            watchTask: true, // < VERY important
-            proxy: "localhost"
-        }
-      }
-    }
   });
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-coffee');
-  grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-uglify');
-  grunt.loadNpmTasks('grunt-contrib-watch');
-  grunt.loadNpmTasks('grunt-browser-sync');
+  grunt.loadNpmTasks('grunt-autoprefixer');
 
   // Default task.
-  grunt.registerTask('default', ["browserSync", "watch"]);
+  grunt.registerTask('default', ['watch']);
 
 };
