@@ -416,6 +416,10 @@ header nav .cart .number {
   left: 1.1em;
 }
 
+#reviews .comment-form-author, #reviews .comment-form-email {
+  width: 100% !important;
+}
+
 .hentry {
   border: none;
 }

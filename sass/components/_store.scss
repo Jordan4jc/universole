@@ -27,14 +27,23 @@
 		max-width: 370px;
 	}
 }
-.woocommerce-tabs ul.tabs {
-  margin-bottom: 20px;
+.woocommerce-tabs {
+	ul.tabs {
+  	margin-bottom: 20px;
+	}
 }
 .oops {
 	text-align: center;
 	padding: 120px 0;
 }
-.widget_search form:before, .widget_product_search form:before {
-	top: 1.318em;
-  left: 1.1em;
+.widget_search, .widget_product_search {
+	form:before {
+		top: 1.318em;
+	  left: 1.1em;
+	}
+}
+#reviews {
+	.comment-form-author, .comment-form-email {
+  	width: 100% !important;
+	}
 }
