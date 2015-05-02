@@ -544,6 +544,38 @@ table.cart .quantity .qty {
   padding-bottom: 1.387em;
 }
 
+#dgx-donate-container {
+  padding: 0;
+  background-color: white;
+  margin: 0;
+}
+
+#dgx-donate-form label {
+  margin-bottom: 10px;
+}
+#dgx-donate-form .dgx_donate_geography_selects label {
+  width: 50%;
+}
+#dgx-donate-form .dgx_donate_geography_selects select {
+  max-width: none;
+  width: 50%;
+}
+
+.dgx-donate-form-section {
+  padding: 20px;
+}
+@media (max-width: 420px) {
+  .dgx-donate-form-section {
+    border: none;
+    padding: 0;
+  }
+}
+.dgx-donate-form-section .aftertext {
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 10px;
+}
+
 .strip {
   font-weight: 700;
   color: white;
