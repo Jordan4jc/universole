@@ -419,6 +419,12 @@ header nav .cart .number {
   width: 100% !important;
 }
 
+@media screen and (max-width: 65.141em) {
+  table.cart td.actions input[name=apply_coupon] {
+    margin-left: 0 !important;
+  }
+}
+
 .hentry {
   border: none;
 }
