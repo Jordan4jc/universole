@@ -440,6 +440,10 @@ p.create-account, .create-account {
   margin-bottom: 20px;
 }
 
+#payment .place-order .button, #payment .place-order input[type="submit"] {
+  font-size: 18px;
+}
+
 .hentry {
   border: none;
 }
