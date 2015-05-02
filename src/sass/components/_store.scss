@@ -3,7 +3,7 @@
 	max-width: 769px;
 	margin: 0 auto;
 	position: relative;
-	@include clearfix();
+	@extend %clearfix;
 	.button {
 		margin-top: 0;
 	}
@@ -14,7 +14,7 @@
 		padding-right: 30px;
 		position: absolute;
 		top: 50%;
-		@include translateY(-50%);
+		transform: translateY(-50%);
 		p {
 			&:last-of-type {
 				margin-bottom: 35px;

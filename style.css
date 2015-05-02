@@ -12,12 +12,16 @@
  GitHub Theme URI: https://github.com/Jordan4jc/universole
  GitHub Branch:    master
 */
+.inner-grid:after, .widget_siteorigin-panels-postloop:after, .shop-item:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 .inner-grid {
   width: 90%;
   max-width: 980px;
   margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
 }
 .inner-grid .col {
   float: left;
@@ -90,8 +94,6 @@
   width: 90%;
   max-width: 1168px;
   margin: 0 auto;
-  overflow: hidden;
-  *zoom: 1;
 }
 @media (max-width: 780px) {
   .widget_siteorigin-panels-postloop {
@@ -375,8 +377,6 @@ header nav .cart .number {
   max-width: 769px;
   margin: 0 auto;
   position: relative;
-  overflow: hidden;
-  *zoom: 1;
 }
 .shop-item .button, .shop-item input[type="submit"] {
   margin-top: 0;
@@ -388,10 +388,9 @@ header nav .cart .number {
   padding-right: 30px;
   position: absolute;
   top: 50%;
-  -moz-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 .shop-item .info p:last-of-type {
   margin-bottom: 35px;
@@ -433,10 +432,8 @@ header nav .cart .number {
   box-shadow: none;
   padding: 18px 34px;
   border-radius: 3px;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  -webkit-transition: all .3s ease;
+          transition: all .3s ease;
 }
 .button.white, input.white[type="submit"] {
   background-color: white;
@@ -484,10 +481,8 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
   border-radius: 3px;
   border: 4px solid rgba(0, 0, 0, 0.03);
   padding: 0.918em;
-  -moz-transition: border-color 0.3s ease;
-  -o-transition: border-color 0.3s ease;
-  -webkit-transition: border-color 0.3s ease;
-  transition: border-color 0.3s ease;
+  -webkit-transition: border-color .3s ease;
+          transition: border-color .3s ease;
 }
 input[type="text"]:focus, input[type="email"]:focus, input[type="url"]:focus, input[type="password"]:focus, input[type="search"]:focus, textarea:focus, .input-text:focus {
   background-color: white !important;
@@ -742,8 +737,8 @@ ul {
     max-width: 160%;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
-
-/*# sourceMappingURL=style.css.map */

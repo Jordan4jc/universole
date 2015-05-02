@@ -4,10 +4,7 @@
   box-shadow: none;
   padding: 18px 34px;
   border-radius: 3px;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  transition: all .3s ease;
 }
 .button.white {
   background-color: white;

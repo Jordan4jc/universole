@@ -23,7 +23,7 @@ input[type="text"], input[type="email"], input[type="url"], input[type="password
 	border-radius: 3px;
 	border: 4px solid rgba(0,0,0,0.03);
 	padding: 0.918em;
-	@include transition(border-color .3s ease);
+	transition: border-color .3s ease;
 	&:focus {
 		background-color: white !important;
 		border-color: rgba(0,0,0,0.07);

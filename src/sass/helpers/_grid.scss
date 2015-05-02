@@ -1,9 +1,8 @@
-@import 'helpers/variables';
 .inner-grid {
 	width: 90%;
 	max-width: 980px;
 	margin: 0 auto;
-	@include clearfix();
+	@extend %clearfix;
 	.col {
 		float: left;
 		box-sizing: border-box;
@@ -79,7 +78,7 @@
 	width: 90%;
 	max-width: 1168px;
 	margin: 0 auto;
-	@include clearfix();
+	@extend %clearfix;
 	@media (max-width: 780px) {
 		width: 100%;
 	}
