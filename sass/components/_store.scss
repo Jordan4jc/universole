@@ -1,0 +1,36 @@
+.shop-item {
+	width: 90%;
+	max-width: 769px;
+	margin: 0 auto;
+	position: relative;
+	@include clearfix();
+	.button {
+		margin-top: 0;
+	}
+	.info {
+		width: 50%;
+		float: left;
+		box-sizing: border-box;
+		padding-right: 30px;
+		position: absolute;
+		top: 50%;
+		@include translateY(-50%);
+		p {
+			&:last-of-type {
+				margin-bottom: 35px;
+			}
+		}
+	}
+	.attachment-post-thumbnail {
+		width: 50%;
+		float: right;
+		max-width: 370px;
+	}
+}
+.woocommerce-tabs ul.tabs {
+  margin-bottom: 20px;
+}
+.oops {
+	text-align: center;
+	padding: 120px 0;
+}
