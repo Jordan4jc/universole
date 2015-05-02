@@ -1,3 +1,8 @@
+form.checkout {
+	label {
+		margin-bottom: 10px;
+	}
+}
 .shop-item {
 	width: 90%;
 	max-width: 769px;
@@ -60,4 +65,10 @@ table.cart {
 			}
 		}
 	}
+}
+p.create-account, .create-account {
+  margin-bottom: 10px !important;
+}
+#customer_details {
+  margin-bottom: 20px;
 }

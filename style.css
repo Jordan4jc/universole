@@ -372,6 +372,10 @@ header nav .cart .number {
   opacity: 1;
 }
 
+form.checkout label {
+  margin-bottom: 10px;
+}
+
 .shop-item {
   width: 90%;
   max-width: 769px;
@@ -426,6 +430,14 @@ table.cart .quantity .qty {
   table.cart td.actions input[name=apply_coupon] {
     margin-left: 0 !important;
   }
+}
+
+p.create-account, .create-account {
+  margin-bottom: 10px !important;
+}
+
+#customer_details {
+  margin-bottom: 20px;
 }
 
 .hentry {
